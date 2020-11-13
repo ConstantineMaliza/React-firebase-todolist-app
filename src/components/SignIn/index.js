@@ -9,7 +9,7 @@ import '../Style/form.css';
  
 const SignInPage = () => (
   <div>
-    <h1 style={{textAlign:'center'}}>SignIn</h1>
+    <h1 style={{textAlign:'center', marginTop:'10%'}}>SignIn</h1>
     <SignInForm />
     <SignUpLink />
   </div>

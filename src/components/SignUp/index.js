@@ -101,7 +101,7 @@ const INITIAL_STATE = {
           type="password"
           placeholder="Confirm Password"
         />
-         <button disabled={isInvalid} type="submit">
+         <button disabled={isInvalid} type="submit" style={{opacity: '0.6',cursor: 'not-allowed',}}>
           Sign Up
         </button>
  

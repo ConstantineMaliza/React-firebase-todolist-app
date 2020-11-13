@@ -42,9 +42,13 @@ const config = {
   
     users = () => this.db.collection('users');
 
+     // *** User API ***
+     
     todos = () => this.db.collection('Todolistapp');
     
     todo= () =>this.db.collection('Todolistapp');
+
+    delete = id => this.db.collection('Todolistapp').doc(id).delete();
     }
 
    

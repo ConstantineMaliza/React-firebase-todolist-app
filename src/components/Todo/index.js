@@ -14,12 +14,12 @@ import ReadAllToDo from './readalltodo';
 // };
 
 class ToDoPage extends Component {
-    // constructor(props) {
-    //     super(props);
+    constructor(props) {
+        super(props);
+        console.log(this.props.authUser)
+        // this.state = { ...newtodostate };
+    }
 
-    //     this.state = { ...newtodostate };
-    // }
-    
     // handleChange = (event) => {
     //     this.setState({
     //         todo: event.currentTarget.value,
@@ -79,8 +79,8 @@ class ToDoPage extends Component {
                     <h1>React Todo App</h1>
                 </header>
                 <main>
-                    <AddToDo/>
-                    <ReadAllToDo/>
+                    <AddToDo authUser={this.props.authUser} />
+                    <ReadAllToDo authUser={this.props.authUser} />
 
 
                     {/* <ul className="todos">

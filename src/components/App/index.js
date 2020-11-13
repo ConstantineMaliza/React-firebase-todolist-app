@@ -41,11 +41,11 @@ class App extends Component {
       <Router>
         <div>
         <Navigation authUser={this.state.authUser} />
-          <hr />
+         
 
           <Route exact path={ROUTES.SIGN_IN} component={SignInPage} />
           <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
-          <Route path={ROUTES.TODO} component={ToDoPage}></Route>
+          <Route path={ROUTES.TODO} ><ToDoPage authUser={this.state.authUser}/></Route>
         </div>
       </Router>
     );

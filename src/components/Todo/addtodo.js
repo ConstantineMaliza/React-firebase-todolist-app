@@ -16,18 +16,20 @@ class AddToDo extends Component {
     handleChange = (event) => {
         this.setState({
             todo: event.currentTarget.value,
+            author: this.props.authUser.uid,
+
         });
     }
 
 
     handleSubmit = (event) => {
         // grab original todos from state 
-        const { todo } = this.state;
+        const { todo, author } = this.state;
         // todo text is result
         // append new todo with default state to todos
-        this.props.firebase.todo().add({ todo })
+        this.props.firebase.todo().add({todo, author})
             .then(() => {
-                console.log("done");
+                // console.log(author);
                 this.setState({ ...newtodostate });
             })
             .catch(error => {
