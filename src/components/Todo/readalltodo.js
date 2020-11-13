@@ -22,10 +22,10 @@ class ReadAllToDo extends Component {
  
     componentDidMount() {
         this.listener = this.props.firebase.auth.onAuthStateChanged(function(authUser){
-      if(authUser)  console.log(authUser)
+      if(authUser) { console.log(authUser)
+      this.unsubuscribe =  this.props.firebase.todos().where('author', '==', this.props.authUser.uid).onSnapshot(this.onDataChange)
+    }});
         
-    });
-        this.unsubuscribe =  this.props.firebase.todos().onSnapshot(this.onDataChange)
 
         
        
