@@ -1,0 +1,20 @@
+.todos input {
+    top: 0;
+    bottom: 0;
+    left: '3rem';
+    right: '5rem';
+    line-height: '62px';
+    display: 'block';
+    position: 'absolute';
+}
+
+/* .todos button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: '1.25rem';
+    margin: 'auto 0';
+    height: '25px';
+    padding-top: 0;
+    padding-bottom: 0;
+} */
