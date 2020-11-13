@@ -1,20 +1,27 @@
-.todos input {
-    top: 0;
-    bottom: 0;
-    left: '3rem';
-    right: '5rem';
-    line-height: '62px';
-    display: 'block';
-    position: 'absolute';
-}
+.todo input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: center;
+    font-size: large;
+  }
 
-/* .todos button {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: '1.25rem';
-    margin: 'auto 0';
-    height: '25px';
-    padding-top: 0;
-    padding-bottom: 0;
-} */
+.todos input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 50%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: center;
+    font-size: large;
+}

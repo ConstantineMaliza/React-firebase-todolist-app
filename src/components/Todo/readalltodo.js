@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { withFirebase } from '../Firebase';
+import '../Style/form.css';
 
 
 const state = {
@@ -21,12 +22,12 @@ class ReadAllToDo extends Component {
 
  
     componentDidMount() {
-        this.listener = this.props.firebase.auth.onAuthStateChanged(function(authUser){
-      if(authUser) { console.log(authUser)
-      this.unsubuscribe =  this.props.firebase.todos().where('author', '==', this.props.authUser.uid).onSnapshot(this.onDataChange)
-    }});
+    //     this.listener = this.props.firebase.auth.onAuthStateChanged(function(authUser){
+    //   if(authUser) { console.log(authUser)
+      
+    // }});
         
-
+this.unsubuscribe =  this.props.firebase.todos().onSnapshot(this.onDataChange)
         
        
     }
@@ -42,7 +43,7 @@ class ReadAllToDo extends Component {
 
     // }
     componentWillUnmount() {
-        this.listener();
+        // this.listener();
         this.unsubuscribe();
     }   
     onDataChange(items) {
@@ -91,12 +92,12 @@ class ReadAllToDo extends Component {
     render() {
         const { todos } = this.state;
         return (
-            <ul>
+            <ul className="todos">
                 {todos.map((todo, index) => (
                     <li key={index}>
-                        <input type="checkbox" />
+                        {/* <input type="checkbox" /> */}
                         <span style={{}}></span>
-                        <input value={todo.title} onChange={e => { this.setState(previousState => ({ ...previousState, todos: previousState.todos.map((elm, i) => i !== index ? elm : { ...elm, title: e.target.value }) })) }} />
+                        <input value={todo.title}  onChange={e => { this.setState(previousState => ({ ...previousState, todos: previousState.todos.map((elm, i) => i !== index ? elm : { ...elm, title: e.target.value }) })) }} />
                         {/* {todo.title} */}
                         <button onClick={(e) => this.handleEdit(index, e.target.value)}>update</button>
                         <button

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { withFirebase } from '../Firebase';
+import '../Style/todo.css'
 
 const newtodostate = {
     todo: '',
@@ -43,7 +44,7 @@ class AddToDo extends Component {
         const { todo } = this.state;
         return (
 
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} className="todo">
                 <input name="todo" type="text" onChange={this.handleChange} value={todo} placeholder="Enter todo here...[Press Enter]" autoComplete="off" />
             </form>
         )
