@@ -22,8 +22,8 @@ class ReadAllToDo extends Component {
  
     componentDidMount() {
         this.listener = this.props.firebase.auth.onAuthStateChanged(function(authUser){
-      if(authUser) console.log(authUser)
-        console.log(user);
+      if(authUser)  console.log(authUser)
+        
     });
         this.unsubuscribe =  this.props.firebase.todos().onSnapshot(this.onDataChange)
 
